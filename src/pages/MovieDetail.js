@@ -7,7 +7,7 @@ export const MovieDetail = () => {
   const [movie, setMovie] = useState({});
   const {
     poster_path,
-    id,
+   
     title,
     overview,
     vote_average,
@@ -38,8 +38,8 @@ export const MovieDetail = () => {
       setMovie(json);
       console.log(json);
     }
-    fetchMovie();
-  }, []);
+    fetchMovie(params.id);
+  }, [params.id]);
 
   return (
     <main>
