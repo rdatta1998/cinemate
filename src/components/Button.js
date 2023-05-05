@@ -1,10 +1,7 @@
-import React from 'react'
-
-
-export const Button = ({children}) => {
+export const Button = ({ children }) => {
   return (
-    <button className="w-64 text-white tet-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg py-2 px-2 font-medium">
+    <button className="w-64 text-xl text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-lg px-5 py-2.5 mr-2 mb-2 font-medium">
       {children}
     </button>
   );
-}
+};

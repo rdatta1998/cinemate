@@ -1,11 +1,12 @@
-import PageNotFoundImage from "../assets/images/pagenotfound.png";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import PageNotFoundImage from "../assets/images/pagenotfound.png";
 import { Button } from "../components";
 
-import { useTitle } from "../hooks/useTitle";
-
 export const PageNotFound = () => {
-  useTitle("Page Not Found / Cinemate");
+  useEffect(() => {
+    document.title = `Page Not Found / Cinemate`;
+  });
 
   return (
     <main>
@@ -14,7 +15,6 @@ export const PageNotFound = () => {
           <p className="text-7xl text-gray-700 font-bold my-10 dark:text-white">
             404, Oops!
           </p>
-
           <div className="max-w-lg">
             <img
               className="rounded"
@@ -23,9 +23,9 @@ export const PageNotFound = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center my-4">
           <Link to="/">
-            <Button>Back to Cinemate</Button>
+            <Button>Back To Cinemate</Button>
           </Link>
         </div>
       </section>
